@@ -5,6 +5,7 @@ export const findTemplateFile = async (pattern: string): Promise<string> => {
   const files = await glob(pattern, { nodir: true });
 
   if (files.length === 0) {
+    console.log("test");
     throw new Error(`No template file found for pattern: ${pattern}`);
   }
 
